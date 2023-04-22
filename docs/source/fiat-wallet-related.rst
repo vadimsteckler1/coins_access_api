@@ -166,3 +166,92 @@ Response
            "internalOrderId":"123",
            "orderStatus":"pending" // pending, success, failed
    }
+
+PHP Wallet-to-Wallet Transfer
+------------------------------
+A wallet-to-wallet (P2P) fund transfer involves the following steps:
+A user initiates the request and the transfer request is passed from Merchant to Coins. Upon receiving the request, Coins executes the transfer and updates the user’s wallet.
+For endpoint details, please refer to P2P Transfer.
+
+.. image::
+   PHP_wal-to-wal.png
+   
+Fetching Supported Channels
+~~~~~~~~~~~~~~~~~~~~~~~~
+This endpoint fetches the channels that Coins Access supports for various transactions.
+
+**Method:** POST
+
+**URL:** /merchant-api/transaction/fiat/query-supported-channels
+
+**Idempotent:** True
+
+Request
+~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Parameter
+     - Layout
+     - Required
+     - Description
+   * - userId
+     - Request body
+     - yes
+     - User ID in the Merchant’s platform   
+   * - transactionType
+     - Request body
+     - yes
+     - Cash-in/cash-out
+   * - currency
+     - Request body
+     - yes
+     - PHP
+
+Response
+~~~~~~~
+
+.. code-block:: JSON
+
+   {
+       "data":[
+           {
+               "transactionChannel":"INSTAPAY", // channel code
+               "transactionChannelName":"Instapay", // channel name
+               "transactionSubject":"gcash", // bank or e-wallet code
+               "transactionSubjectName":"GCash", // bank or e-wallet name
+               "transactionType":"-1", // 1: cash-in; -1: cash-out
+               "channelIcon":"http://www.icon.com/instapay", //channel icon
+               "subjectIcon":"http://www.icon.com/gcash",// bank or e-wallet icon
+               "Maximum":"10000000", // Single ratio maximum limit 
+               "minimum":"100000",  // Single ratio minimum limit 
+               "dailyLimit":"100000", 
+               "monthlyLimit":"100000",
+               "annualLimit":"100000",
+               "Precision":"2",
+               "maxWithdrawBalance" : "100000", // The maximum balance that the user can withdraw at a time
+               "status" : "1" // 1: available, -1: unavailable
+
+           },
+           {
+               "transactionChannel":"PESONET",
+               "transactionChannelName":"Pesonet",
+               "transactionSubject":"maya",
+               "transactionSubjectName":"Maya",
+               "transactionType":"-1",
+               "channelIcon":"http://www.icon.com/instapay",
+               "subjectIcon":"http://www.icon.com/maya",
+               "maximum":"10000000",
+               "minimum":"100000",
+               "dailyLimit":"100000",
+               "monthlyLimit":"100000",
+               "annualLimit":"100000",
+               "precision":"2",
+               "maxWithdrawBalance" : "100000",
+               "status" : "1"
+           }
+       ],
+       "status":"0",
+       "error": "ok"
+   }
