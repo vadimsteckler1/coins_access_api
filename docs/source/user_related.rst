@@ -380,3 +380,127 @@ Important notes:
   ``lv1Info``, ``lv2Info`` and ``lv3Info`` are optional. If only ``lv1Info`` is shared with Coins, Coins will only verify ``lv1``. Consequently, if this user passes verification, she or he will be considered ``kyc lv1``.
 
 - All documents and photos must be encoded with Base64. The file’s URL is not to be encoded.
+
+Responses
+~~~~~~~
+
+**KYC check is required**
+
+.. code-block:: JSON
+
+   {    
+          "userId" : "1304304339091773722",
+          "registerStatus" : "Processing",
+          "kycStatus" : "Processing"
+
+   }
+
+
+**KYC check is not required**
+
+.. code-block:: JSON
+
+   {    
+          "userId" : "1304304339091773722",
+          "registerStatus" : "Success",
+          "kycStatus" : "Passed"
+
+   }
+
+Retrieving User Status
+----------------------
+This endpoint fetches the user’s current status.
+
+**Method:** POST
+
+**URL:** /merchant-api/user/query-user-status
+
+**Idempotent:** True
+
+Request
+~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Parameter
+     - Layout
+     - Required
+     - Description
+   * - userId
+     - Request body
+     - yes
+     - User ID in the Merchant’s platform
+
+Response
+~~~~~~~
+
+.. code-block:: JSON
+
+    "userId" : "1304304339091773722",
+    "registerStatus" : "success",
+    "kycStatus" : "lv2"
+
+Retrieving User’s KYC Information
+----------------------
+This endpoint fetches the user’s current KYC information.
+
+**Method:** POST
+
+**URL:** /merchant-api/user/query-user-kyc
+
+**Idempotent:** True
+
+Request
+~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Parameter
+     - Layout
+     - Required
+     - Description
+   * - userId
+     - Request body
+     - yes
+     - User ID in the Merchant’s platform
+   * - isReturnImag
+     - Request body
+     - no
+     - KYC detail contains images    
+
+Response
+~~~~~~~
+
+.. code-block:: JSON
+
+   {
+   "kycType":"kyc",
+   "kycLevel": "string",
+   "firstName": "string",
+   "middleName": "string",
+   "lastName": "string",
+   "dateOfBirth": "string",
+   "countryOfBirth": "string",
+   "gender": "string",
+   "nationality": "string",
+   "currentCountry": "string",
+   "currentState": "string",
+   "currentCity": "string",
+   "currentStreet": "string",
+   "currentZipCode": "string",
+   "purposeOfAccount": "string",
+   "idType": "string",
+   "idNumber": "string",
+   "idAddress": "string",
+   "idExpirationDate": "string",
+   "idIssuanceCountry": "string",
+   "idIssuanceDate": "string",
+   "frontImg": "/9j/4AA..[omitted]..PxA=",
+   "backImg": "/9j/4AA..[omitted]..PxA=",
+   "liveCheckImg": "/9j/4AA..[omitted]..PxA=",
+   "selfieImg": "/9j/4AA..[omitted]..PxA="
+   }
+
+
