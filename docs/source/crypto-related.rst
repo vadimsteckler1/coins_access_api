@@ -341,7 +341,7 @@ Request
    * - status
      - integer
      - no
-     - 0-PROCESSING, 
+     - 0-PROCESSING 
        
        1-SUCCESS
        
@@ -435,7 +435,7 @@ Request
    * - status
      - integer
      - no
-     - 0-PROCESSING, 
+     - 0-PROCESSING 
        
        1-SUCCESS
        
