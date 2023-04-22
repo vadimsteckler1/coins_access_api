@@ -131,6 +131,7 @@ Response
 Event Enums
 
 .. code-block:: console
+
   USER_STATUS_UPDATE
   TRANSACTION_STATUS_UPDATE
   FIAT_CASH_IN_NOTIFICATION
