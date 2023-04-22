@@ -164,4 +164,85 @@ KYC information
        - 'certificate' : Certificate from University, Government Institution, or Embassy
        
        - 'insurance' : Statement of Account - Life Insurance
+   * - poaDocs
+     - array
+     - no
+     - Proof of Address document, which is encoded in base64 (if any), such as: "/9j/4AA..[omitted]..PxA="
+   * - soiEmploymentStatus
+     - string
+     - yes
+     - Detailed information about the Source of Income(SOI):
      
+       - 'employed' : Employed
+       
+       - 'self_e' : Self Employed
+       
+       - 'freelance' : Freelancer
+       
+       - 'unemployed' : Unemployed
+       
+       - 'retired' : Retired
+       
+       - 'student' : Student
+   * - soiIndustry
+     - string
+     - yes
+     - Industry or sector in which the source of income of the individual belongs to
+   * - soiCompanyName
+     - string
+     - yes
+     - Name of the company where the individual is employed
+   * - soiJobTitle
+     - string
+     - yes
+     - Job title or position of the individual in their current employment     
+   * - soiSourceOfFunds
+     - string
+     - yes
+     - Origin of the funds that will be used for the account
+   * - soiProofType
+     - string
+     - no
+     - Type of proof document submitted as a source of identification or verification:
+     
+       - 'payslip' : Payslip
+       
+       - 'cert_employment' : Certificate of Employment
+       
+       - 'tax_return' : Your Latest Income Tax Return
+       
+       - 'contract' : valid contract
+   * - soiProofDoc
+     - string
+     - no
+     - Proof document uploaded by the individual to verify their source of income.
+   * - idType
+     - string
+     - yes
+     - Detailed information about document verification. The following document types are supported:
+     
+       - 'passport' : International Passport
+       
+       - 'passport-old' : Philippines Passport - old version
+       
+       - 'passport-new' : Philippines Passport - new version
+       
+       - 'umid' : Unified Multi-Purpose ID
+       
+       - 'driver' : Driver’s license
+       
+       - 'sss' : Social Security System ID
+       
+       - 'postal' : Postal ID
+       
+       - 'prc' : PRC ID
+       
+       - 'voter' : Voter's ID
+       
+       - 'philhealth' : PhilHealth ID
+       
+       - 'philsys' : Philsys National ID
+   * - soiJobTitle
+     - string
+     - yes
+     - Job     
