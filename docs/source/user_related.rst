@@ -57,4 +57,38 @@ Request
      - Request Body
      - yes
      - The user’s information that Merchant shares with Coins. See an example below.
-    
+
+KYC information 
+~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Field name
+     - Data type
+     - Required
+     - Description
+   * - residence
+     - String
+     - yes
+     - Country code of the region where the user is based, e.g. PH
+   * - kycLevel
+     - String
+     - yes
+     - KYC level, e.g. lv0,lv1,lv2,lv3
+   * - firstName
+     - String
+     - yes
+     - User’s first name
+   * - middleName
+     - String
+     - no
+     - User’s middle name
+   * - last name
+     - String
+     - yes
+     - User’s last name
+   * - dateOfBirth
+     - String
+     - yes
+     - User’s date of birth. The date format patterns to use: 'yyyy-MM-dd HH:mm:ss'
