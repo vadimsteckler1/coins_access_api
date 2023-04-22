@@ -290,3 +290,84 @@ KYC information
      - string
      - no
      - Date of registration for the identification document     
+   * - frontImg
+     - string
+     - yes
+     - The front side image of the identity document, encoded in base64 and provided as a string of characters, such as ``/9j/4AA..[omitted]..PxA=``.
+   * - backImg
+     - string
+     - no
+     - The back side image of the identity document (if any), encoded in base64 and provided as a string of characters, such as ``/9j/4AA..[omitted]..PxA=``.
+   * - liveCheckImg
+     - string
+     - no
+     - Image of the user's face taken during the KYC process, encoded in base64 and provided as a string of characters, such as ``/9j/4AA..[omitted]..PxA=``.
+   * - selfieImg
+     - string
+     - yes
+     - The user's selfie encoded in base64 and provided as a string of characters, such as ``/9j/4AA..[omitted]..PxA=``.
+
+Sample KYC Information
+~~~~~~~
+
+.. code-block:: JSON
+
+   {
+       "userId":"12af3vf3",
+       "email":"abc@gmail.com",
+       "phone":"+639171234567",
+       "verified": true,
+       "verifiedTime":"2022-03-11T14:00:22",
+       "kycType":"kyc",
+       "kycInfo":{
+           "residence":"PH",
+           "kycLevel":"2",
+           "firstName":"string",
+           "middleName":"string",
+           "lastName":"string",
+           "dateOfBirth":"1990-01-23 00:00:00",
+           "countryOfBirth":"string",
+           "gender":"string",
+           "nationality":"string",
+           "currentCountry":"string",
+           "currentState":"string",
+           "currentCity":"string",
+           "currentStreet":"string",
+           "currentZipCode":"string",
+           "permCountry":"string",
+           "permState":"string",
+           "permCity":"string",
+           "permStreet":"string",
+           "permZipCode":"string",
+           "poaDocType":"string",
+           "poaDocs":[
+               "/9j/4AA..[omitted]..PxA=",
+               "/9j/4AA..[omitted]..PxA="
+           ],
+           "soiEmploymentStatus":"string",
+           "soiIndustry":"string",
+           "soiCompanyName":"string",
+           "soiJobTitle":"string",
+           "soiSourceOfFunds":"string",
+           "soiProofType":"string",
+           "soiProofDoc":"/9j/4AA..[omitted]..PxA=",
+           "idType":"string",
+           "idNumber":"string",
+           "idFirstName":"string",
+           "idMiddleName":"string",
+           "idLastName":"string",
+           "idGender":"string",
+           "idDob":"string",
+           "idAddress":"string",
+           "idExpirationDate":"string",
+           "idIssuanceCountry":"string",
+           "idIssuanceDate":"string",
+           "idNationality":"string",
+           "idRegistrationDate":"string",
+           "frontImg":"/9j/4AA..[omitted]..PxA=",
+           "backImg":"/9j/4AA..[omitted]..PxA=",
+           "liveCheckImg":"/9j/4AA..[omitted]..PxA=",
+           "selfieImg":"/9j/4AA..[omitted]..PxA="
+       }
+   }
+
