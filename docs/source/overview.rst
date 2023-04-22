@@ -12,3 +12,12 @@ Coins Access is an international financial platform with the following main capa
 - Internal wallet-to-wallet transfers.
 - Local live payments, such as mobile phone top-up, bill payments, etc.
 - Transaction reconciliations synchronized between the Merchant and Coins with consecutive ledger updates.
+Coins Access Account System
+---------------------------
+
+As illustrated in the diagram below, the Merchant’s and Coins.ph account systems and user spaces will remain completely segregated and independent. This is also applicable to the user’s KYC and account information that will not be shared between different “merchant” accounts even though it refers to the same individual.
+
+.. figure:: Access_API_Diagram.png
+   :alt: Coins Access Account System Diagram
+
+   Coins Access Account System Diagram
