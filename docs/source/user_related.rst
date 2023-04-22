@@ -242,7 +242,51 @@ KYC information
        - 'philhealth' : PhilHealth ID
        
        - 'philsys' : Philsys National ID
-   * - soiJobTitle
+   * - idNumber
      - string
      - yes
-     - Job     
+     - Unique identification number assigned to the individual by a governmental or authorized agency     
+   * - idFirstName
+     - string
+     - no
+     - First name of the individual as it appears on their identification document
+   * - idMiddleName
+     - string
+     - no
+     - Middle name of the individual as it appears on their identification document
+   * - idLastName
+     - string
+     - no
+     - Last name of the individual as it appears on their identification document
+   * - idGender
+     - integer
+     - no
+     - Gender of the individual as it appears on their identification document. For example, 1: Male 2: Female
+   * - idDob
+     - string
+     - no
+     - Date of birth of the individual as it appears on their identification document. Use the following date format pattern: 'yyyy-MM-dd HH:mm:ss'
+   * - idAddress
+     - string
+     - no
+     - Address of the individual as it appears on their identification document
+   * - idExpirationDate
+     - string
+     - no
+     - Expiration date of the identification document
+   * - idIssuanceCountry
+     - string
+     - no
+     - Country where the identification document was issued
+   * - idIssuanceDate
+     - string
+     - no
+     - Date on which the identification document was issued
+   * - idNationality
+     - string
+     - no
+     - Nationality of the individual as it appears on their identification document
+   * - idRegistrationDate
+     - string
+     - no
+     - Date of registration for the identification document     
