@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Coins Open API'
+project = 'Coins Access API'
 copyright = '2023, Coins.ph'
 author = 'Coins Product Department'
 
