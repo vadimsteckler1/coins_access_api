@@ -69,26 +69,58 @@ KYC information
      - Required
      - Description
    * - residence
-     - String
+     - string
      - yes
      - Country code of the region where the user is based, e.g. PH
    * - kycLevel
-     - String
+     - string
      - yes
      - KYC level, e.g. lv0,lv1,lv2,lv3
    * - firstName
-     - String
+     - string
      - yes
      - User’s first name
    * - middleName
-     - String
+     - string
      - no
      - User’s middle name
    * - last name
-     - String
+     - string
      - yes
      - User’s last name
    * - dateOfBirth
-     - String
+     - string
      - yes
-     - User’s date of birth. The date format patterns to use: 'yyyy-MM-dd HH:mm:ss'
+     - User’s date of birth. Use the following date format pattern: 'yyyy-MM-dd HH:mm:ss'
+   * - countryOfBirth
+     - string
+     - yes
+     - User’s country of birth
+   * - Gender
+     - integer
+     - yes
+     - User’s gender. For example, 1: Male 2: Female
+   * - nationality
+     - string
+     - yes
+     - User’s nationality
+   * - currentCountry
+     - string
+     - yes
+     - Current country of residence
+   * - currentState
+     - string
+     - yes
+     - Current state of residence
+   * - currentCity
+     - string
+     - yes
+     - Current city of residence
+   * - currentStreet
+     - string
+     - yes
+     - The street where the user currently resides
+   * - currentZipCode
+     - string
+     - yes
+     - ZIP code of the area where the user currently resides     
