@@ -1,13 +1,7 @@
-Welcome to Lumache's documentation!
+Welcome to Coins Access API documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Coins.ph offers a white label e-wallet API that allows Filipino users who receive financial services offered by other Merchants to take full control and ownership of their digital assets. In addition, our wallet is reinforced with market-leading features to achieve institutional-grade security, ease-of-use, and unsurpassed performance.
 
 .. note::
 
@@ -19,5 +13,9 @@ Contents
 .. toctree::
 
    overview
-   usage
-   api
+   api_reference
+   user_related
+   fiat-wallet-related
+   crypto-related
+   fiat-crypto-conversion-related
+   webhooks
