@@ -255,3 +255,48 @@ Response
        "status":"0",
        "error": "ok"
    }
+
+Fetching Channel Payment Details
+~~~~~~~~~~~~~~~~~~~~~~~~
+This endpoint fetches the details of a specific channel.
+
+**Method:** POST
+
+**URL:** /merchant-api/transaction/query-channel-payment-details
+
+**Idempotent:** True
+
+Request
+~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Parameter
+     - Layout
+     - Required
+     - Description
+   * - userId
+     - Request body
+     - yes
+     - User ID in the Merchant’s platform   
+   * - transactionType
+     - Request body
+     - yes
+     - Cash-in/cash-out
+   * - channelCode
+     - Request body
+     - yes
+     - Channel code, e.g., Instapay
+
+Response
+~~~~~~~
+
+.. code-block:: JSON
+
+   {
+       "bank" : "UnionBank",
+       "accountNo" : "432324153232"
+   }
+
+
