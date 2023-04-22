@@ -371,3 +371,12 @@ Sample KYC Information
        }
    }
 
+Important notes:
+~~~~~~~
+
+- If a user was verified by the Merchant, and the Merchant does not require that Coins recheck the user information, then this endpoint will return a result directly. If the user was not verified by the Merchant, Coins will enforce a check and notify the Merchant of the final result through a webhook.
+
+- This endpoint is idempotent. Therefore, if the user is already registered the returned result will be identical. 
+  ``lv1Info``, ``lv2Info`` and ``lv3Info`` are optional. If only ``lv1Info`` is shared with Coins, Coins will only verify ``lv1``. Consequently, if this user passes verification, she or he will be considered ``kyc lv1``.
+
+- All documents and photos must be encoded with Base64. The file’s URL is not to be encoded.
