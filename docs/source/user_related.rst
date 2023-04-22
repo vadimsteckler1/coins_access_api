@@ -124,3 +124,44 @@ KYC information
      - string
      - yes
      - ZIP code of the area where the user currently resides     
+   * - permCountry
+     - string
+     - no
+     - Country of permanent residence
+   * - permState
+     - string
+     - no
+     - State of permanent residence
+   * - permCity
+     - string
+     - no
+     - City of permanent residence
+   * - permStreet
+     - string
+     - no   
+     - The street where the user permanently resides
+   * - permZipCode
+     - string
+     - no
+     - ZIP code of the area where the user permanently resides
+   * - poaDocType
+     - string
+     - no
+     - Detailed information about Proof of Address:
+       
+       - 'credit_card_bill' : Credit Card Bill
+       
+       - 'utility_bill' : Utility Bill (water, electricity, cable, phone)
+       
+       - 'phone_bill' : Mobile Phone Bill
+       
+       - 'umid' : UMID
+       
+       - 'tax_return' : Income tax return (Form 2316)
+       
+       - 'cert_barangay' : Barangay Clearance/ Barangay Certification of Residency
+       
+       - 'certificate' : Certificate from University, Government Institution, or Embassy
+       
+       - 'insurance' : Statement of Account - Life Insurance
+     
