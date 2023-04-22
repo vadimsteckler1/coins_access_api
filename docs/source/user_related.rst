@@ -465,7 +465,7 @@ Request
      - Request body
      - yes
      - User ID in the Merchant’s platform
-   * - isReturnImag
+   * - isReturnImage
      - Request body
      - no
      - KYC detail contains images    
@@ -476,31 +476,67 @@ Response
 .. code-block:: JSON
 
    {
-   "kycType":"kyc",
-   "kycLevel": "string",
-   "firstName": "string",
-   "middleName": "string",
-   "lastName": "string",
-   "dateOfBirth": "string",
-   "countryOfBirth": "string",
-   "gender": "string",
-   "nationality": "string",
-   "currentCountry": "string",
-   "currentState": "string",
-   "currentCity": "string",
-   "currentStreet": "string",
-   "currentZipCode": "string",
-   "purposeOfAccount": "string",
-   "idType": "string",
-   "idNumber": "string",
-   "idAddress": "string",
-   "idExpirationDate": "string",
-   "idIssuanceCountry": "string",
-   "idIssuanceDate": "string",
-   "frontImg": "/9j/4AA..[omitted]..PxA=",
-   "backImg": "/9j/4AA..[omitted]..PxA=",
-   "liveCheckImg": "/9j/4AA..[omitted]..PxA=",
-   "selfieImg": "/9j/4AA..[omitted]..PxA="
+      "kycType":"kyc",
+      "kycLevel": "string",
+      "firstName": "string",
+      "middleName": "string",
+      "lastName": "string",
+      "dateOfBirth": "string",
+      "countryOfBirth": "string",
+      "gender": "string",
+      "nationality": "string",
+      "currentCountry": "string",
+      "currentState": "string",
+      "currentCity": "string",
+      "currentStreet": "string",
+      "currentZipCode": "string",
+      "purposeOfAccount": "string",
+      "idType": "string",
+      "idNumber": "string",
+      "idAddress": "string",
+      "idExpirationDate": "string",
+      "idIssuanceCountry": "string",
+      "idIssuanceDate": "string",
+      "frontImg": "/9j/4AA..[omitted]..PxA=",
+      "backImg": "/9j/4AA..[omitted]..PxA=",
+      "liveCheckImg": "/9j/4AA..[omitted]..PxA=",
+      "selfieImg": "/9j/4AA..[omitted]..PxA="
    }
 
+Updating User Status
+----------------------
+This endpoint changes the user status to Frozen or Unfrozen.
 
+**Method:** POST
+
+**URL:** /merchant-api/user/update-user-status
+
+**Idempotent:** True
+
+Request
+~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   
+   * - Parameter
+     - Layout
+     - Required
+     - Description
+   * - userId
+     - Request body
+     - yes
+     - User ID in the Merchant’s platform
+   * - status
+     - Request body
+     - yes
+     - Status: Frozen/Unfrozen     
+
+Response
+~~~~~~~
+
+.. code-block:: JSON
+
+   {
+       "success":true, // true or false
+   }
