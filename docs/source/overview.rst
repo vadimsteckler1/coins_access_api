@@ -45,7 +45,7 @@ Signature
 *********
 Here's an example code snippet for generating a signature using the private key:
 
-.. code-block:: console
+.. code-block:: Java
 
       * @param srcData    original data
       * @param privateKey
