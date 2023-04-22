@@ -299,4 +299,42 @@ Response
        "accountNo" : "432324153232"
    }
 
+Fetching Transaction History
+~~~~~~~~~~~~~~~~~~~~~~~~
+This endpoint fetches the history of user transactions, including P2P transfer history.
+
+**Method:** POST
+
+**URL:** /merchant-api/transaction/query-user-transaction-history
+
+**Idempotent:** True
+
+Request
+~~~~~~~
+
+.. code-block:: JSON
+
+   {
+      "userId" : "10001",
+      "begin"  : "2021-10-19 13:01:43.0",
+      "end"    : "2021-11-19 13:01:43.0"
+   }
+
+Response
+~~~~~~~
+
+.. code-block:: JSON
+
+       [
+          "orderId" : "155080d1d55f4b909c831492425046d5",
+          "orderType" : "Payment" //  Deposit/Withdraw
+          "amount"   : "200",
+          "currency" : "PHP",
+          "paymentId": "1305983960896119622",
+          "channelCode" : "CA00001",
+          "channelName" : "Starbucks",
+          "status" : "success",
+          "description" : "Sugar-free coffee"
+          "createAt" : "2021-11-11 11:01:43.0"
+       ]
 
